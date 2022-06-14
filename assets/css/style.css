@@ -1,0 +1,428 @@
+/* FONT */
+@font-face {
+    font-family: 'poppins-light';
+    src: url('../font/poppins/poppins-light-webfont.woff2') format('woff2'),
+         url('../font/poppins/poppins-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'poppins-regular';
+    src: url('../font/poppins/poppins-regular-webfont.woff2') format('woff2'),
+         url('../font/poppins/poppins-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'poppins-medium';
+    src: url('../font/poppins/poppins-medium-webfont.woff2') format('woff2'),
+         url('../font/poppins/poppins-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'poppins-semibold';
+    src: url('../font/poppins/poppins-semibold-webfont.woff2') format('woff2'),
+         url('../font/poppins/poppins-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'poppins-bold';
+    src: url('../font/poppins/poppins-bold-webfont.woff2') format('woff2'),
+         url('../font/poppins/poppins-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/* BUNDLE */
+:root {
+    --black-color: #212529;
+    --white-color: #f7f7f7;
+    --gray-color: #77797C;
+    --section-gray: #eaeaea;
+    --light-font: 'poppins-light', Arial, Helvetica, sans-serif;
+    --regular-font: 'poppins-regular', Arial, Helvetica, sans-serif;
+    --medium-font: 'poppins-medium', Arial, Helvetica, sans-serif;
+    --semibold-font: 'poppins-semibold', Arial, Helvetica, sans-serif;
+    --bold-font: 'poppins-bold', Arial, Helvetica, sans-serif;
+}
+
+
+
+/* UNIVERSAL */
+* {
+    color: var(--black-color);
+    font-family: var(--light-font);
+    font-size: 1rem;
+}
+
+body {
+    background-color: var(--white-color);
+    /* overflow-x: hidden; */
+}
+
+.main {
+    /* width: 100%; */
+    margin-left: 19%;
+}
+
+section {
+    width: 100%;
+    padding: 80px 50px !important;
+}
+
+.inverse {
+    background-color: var(--section-gray);
+}
+
+.title {
+    font-size: 1.5rem;
+    font-family: var(--semibold-font);
+    color: var(--black-color);
+    border-left: 6px solid var(--black-color);
+    padding-left: 10px;
+    margin-bottom: 26px;
+}
+
+.link-icon {
+    color: var(--black-color);
+    border: 1px solid var(--black-color);
+    transition: 0.3s;
+}
+
+.link-icon:hover {
+    background-color: var(--black-color);
+}
+
+.link-icon:hover > .icon-item {
+    color: var(--white-color);
+}
+
+.icon-item {
+    font-size: 1.2rem;
+    margin: 9px;
+}
+
+.icon-item.fa-instagram {
+    margin: 9px 10.2px;
+}
+
+.icon-item.fa-facebook-f {
+    margin: 9px 12.6px;
+}
+
+.icon-item.fa-linkedin-in {
+    margin: 9px 11px;
+}
+
+
+
+
+/* BODY */
+/* NAVBAR */
+.navbar {
+    background-color: var(--black-color);
+    color: var(--white-color) !important;
+}
+
+
+
+/* SIDEBAR */
+.sidebar {
+    background-color: var(--black-color);
+    width: 19%;
+    height: 100vh;
+}
+
+.sidebar .img-sidebar {
+    width: 69%;
+    border: 10px solid #292F34;
+}
+
+.sidebar .link-sidebar {
+    color: var(--gray-color);
+    transition: 0.3s;
+}
+
+.sidebar .link-sidebar:hover {
+    color: var(--white-color);
+}
+
+
+
+/* HOME */
+.home {
+    height: 100vh;
+}
+
+.home .headline {
+    font-size: 3.6rem;
+    font-family: var(--semibold-font);
+}
+
+.home .subtitle {
+    font-size: 1rem;
+    font-family: var(--regular-font);
+    color: var(--gray-color);
+    margin-top: -6px;
+}
+
+
+/* SKILL */
+.skill .html,
+.skill .css,
+.skill .js,
+.skill .php,
+.skill .scss,
+.skill .bootstrap,
+.skill .laravel,
+.skill .figma {
+    margin-bottom: 50px;
+}
+
+.skill .icon-language {
+    font-size: 3.6rem;
+}
+
+.skill .language {
+    font-size: 1.1rem;
+    font-family: var(--regular-font);
+}
+
+
+
+
+/* EDUCATION */
+.education .card-education {
+    border-left: 3px solid var(--black-color);
+    position: relative;
+}
+
+.education .card-education::before {
+    content: "";
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    background-color: var(--black-color);
+    position: absolute;
+    top: 9px;
+    left: -2px;
+    transform: translate(-50%, -50%);
+}
+
+.education .level {
+    font-size: 1.1rem;
+    font-family: var(--regular-font);
+}
+
+
+
+/* PORTFOLIO */
+.portfolio .card-portfolio {
+    position: relative;
+    transition: 0.3s;
+    overflow-y: hidden;
+    background-color: var(--white-color);
+}
+
+.portfolio .card-portfolio::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--black-color);
+    opacity: 0.1;
+    transition: 0.3s;
+}
+
+.portfolio .card-portfolio:hover::before {
+    left: 0;
+    bottom: 0;
+    transition: 0.3s;
+}
+
+.portfolio .card-portfolio:hover > .card-overlay {
+    bottom: 0;
+}
+
+.portfolio .card-overlay {
+    background-color: var(--black-color);
+    width: 100%;
+    position: absolute;
+    bottom: -140px;
+    left: 0;
+    transition: 0.3s;
+}
+
+.portfolio .card-overlay .part,
+.portfolio .card-overlay .text,
+.portfolio .card-overlay .button-overlay {
+    color: var(--white-color);
+}
+
+.portfolio .card-overlay .part {
+    font-size: 1.2rem;
+    font-family: var(--medium-font);
+}
+
+.portfolio .card-overlay .button-overlay {
+    font-size: 0.9rem;
+    border: 1px solid var(--white-color);
+    transition: 0.3s;
+}
+
+.portfolio .card-overlay .button-overlay:hover {
+    background-color: var(--white-color);
+    color: var(--black-color);
+}
+
+
+
+/* SERVICES */
+.services .number {
+    font-size: 3rem;
+    font-family: var(--semibold-font);
+    color: #dddddd;
+}
+
+.services .name {
+    font-family: 1.1rem;
+    font-family: var(--regular-font);
+}
+
+
+
+/* TESTIMONIAL */
+.testimonial i {
+    font-size: 3rem;
+}
+
+.testimonial .name {
+    font-family: var(--regular-font);
+}
+
+.testimonial .profession {
+    color: var(--gray-color);
+}
+
+
+
+/* LAPTOP */
+@media screen and (max-width: 1439px) {
+    .main {
+        margin-left: 21%;
+    }
+
+    .sidebar {
+        width: 21%;
+    }
+
+    .skill .icon-language {
+        font-size: 2.8rem;
+    }
+
+    .testimonial i {
+        font-size: 2.8rem;
+    }
+}
+
+
+/* TABLET */
+@media screen and (max-width: 1023px) {
+    .main {
+        margin-left: 0;
+    }
+
+    .inverse {
+        background-color: inherit;
+    }
+
+    .home {
+        margin: 0 !important;
+    }
+
+    .skill .html,
+    .skill .css,
+    .skill .js,
+    .skill .php,
+    .skill .scss,
+    .skill .bootstrap,
+    .skill .laravel,
+    .skill .figma,
+    .skill .git {
+        margin-bottom: 50px;
+    }
+
+    .portfolio .card-portfolio {
+        background-color: var(--section-gray);
+    }
+}
+
+/* MOBILE L */
+@media screen and (max-width: 767px) {
+    .home .headline {
+        font-size: 2.3rem;
+    }
+
+    .home .subtitle {
+        margin-top: 0px;
+    }
+
+    .skill .html,
+    .skill .css,
+    .skill .js,
+    .skill .php,
+    .skill .scss,
+    .skill .bootstrap,
+    .skill .laravel,
+    .skill .figma,
+    .skill .git,
+    .skill .github {
+        margin-bottom: 50px;
+    }
+
+    .skill .icon-language {
+        font-size: 3rem;
+    }
+
+    .skill .language {
+        font-size: 1rem;
+    }
+
+    .testimonial i {
+        font-size: 2.5rem;
+    }
+}
+
+
+
+/* MOBILE M */
+@media screen and (max-width: 424px) {
+    .contact .margin {
+        margin-top: 12px;
+    }
+}
+
+
+
+/* MOBILE S */
+@media screen and (max-width: 374px) {
+    .home .headline {
+        font-size: 2rem;
+    }
+
+    .portfolio .card-overlay {
+        bottom: -160px;
+    }
+
+    .testimonial i {
+        font-size: 1.8rem;
+    }
+}
